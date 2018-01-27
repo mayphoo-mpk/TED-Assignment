@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">TED-Assignment</string>
     <string name="action_settings">Settings</string>
+    <string name="dummy_briefly">What are the five biggest global challenges we face right now and what can we do about them? This hour, TED speakers explore some radical solutions to these enduring problems.</string>
+    <string name="recommended_topics">Recommended topics</string>
+    <string name="state_building">State-building</string>
+    <string name="buddhism">Buddhism</string>
+    <string name="ted_books">Ted Books</string>
+    <string name="show_all_topics">Show all topics</string>
+    <string name="recommended_speakers">Recommended speakers</string>
+    <string name="show_all_speakers">Show all speakers</string>
 </resources>

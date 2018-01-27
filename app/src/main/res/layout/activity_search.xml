@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorAccent"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <EditText
+                android:id="@+id/edtxt_search"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:hint="Search TED Talks"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_regular_3x"
+                android:fontFamily="sans-serif-light"
+                android:background="@android:color/transparent"
+                android:clickable="true"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_below="@id/appbar">
+        
+        <RelativeLayout
+            android:id="@+id/rl_recommended"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:id="@+id/ll_recommended_topics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recommended_topics"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_margin="@dimen/margin_medium"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_recommended_topics"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_all_topics"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingLeft="42dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recommended_speakers"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_margin="@dimen/margin_medium"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_recommended_speakers"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_all_speakers"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingLeft="42dp"/>
+
+            </LinearLayout>
+            
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_search_results"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+        
+    </RelativeLayout>
+
+</RelativeLayout>

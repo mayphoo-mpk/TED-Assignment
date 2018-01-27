@@ -4,9 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import mayphoo.mpk.tedAssignment.fragments.TalksFragment;
-import mayphoo.mpk.tedAssignment.fragments.PodcastsFragment;
-import mayphoo.mpk.tedAssignment.fragments.PlaylistsFragment;
+import mayphoo.mpk.tedAssignment.fragments.PlaylistFragment;
+import mayphoo.mpk.tedAssignment.fragments.PodcastFragment;
+import mayphoo.mpk.tedAssignment.fragments.TalkFragment;
 
 /**
  * Created by User on 1/25/2018.
@@ -22,15 +22,15 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                return new TalksFragment();
-                //TalksFragment.newInstance();
+                return new TalkFragment();
+                //TalkFragment.newInstance();
             case 1:
-                return new PlaylistsFragment();
-                /*PlaylistsFragment.newInstance();
+                return new PlaylistFragment();
+                /*PlaylistFragment.newInstance();
                 break;*/
             case 2:
-                return new PodcastsFragment();
-                /*PodcastsFragment.newInstance();
+                return new PodcastFragment();
+                /*PodcastFragment.newInstance();
                 break;*/
         }
         return null;

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:cardview="http://schemas.android.com/tools"
+    cardview:cardCornerRadius="@dimen/margin_small"
+    cardview:elevation="@dimen/margin_small">
+        
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ted_dummy"
+        android:scaleType="fitXY"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_medium_2">
+
+        <TextView
+            android:id="@+id/tv_count_talks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8 talks"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="@dimen/margin_medium"
+            android:paddingRight="@dimen/margin_medium"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/text_regular_2x"
+            android:background="@color/white"
+            android:layout_toRightOf="@id/tv_count_talks"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="@dimen/margin_medium_2"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2:59:42"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/tv_count_talks"
+            android:paddingRight="@dimen/margin_medium"
+            android:paddingLeft="@dimen/margin_medium"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Why not walk it out?"
+            android:textSize="@dimen/text_regular_2x"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-light"
+            android:layout_above="@id/tv_count_talks"
+            android:paddingLeft="@dimen/margin_medium"
+            android:paddingBottom="@dimen/margin_small"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

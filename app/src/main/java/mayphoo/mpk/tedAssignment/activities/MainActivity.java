@@ -1,5 +1,7 @@
 package mayphoo.mpk.tedAssignment.activities;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -54,8 +56,10 @@ public class MainActivity extends BaseActivity implements TabHost.OnTabChangeLis
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();*/
+                Intent searchIntent = SearchActivity.newIntent(getApplicationContext());
+                startActivity(searchIntent);
             }
         });
 
@@ -118,8 +122,6 @@ public class MainActivity extends BaseActivity implements TabHost.OnTabChangeLis
         int pos = this.mViewPager.getCurrentItem();
         this.mTabHost.setCurrentTab(pos);
         onSetToolbarTitle(pos);
-
-
     }
 
     @Override

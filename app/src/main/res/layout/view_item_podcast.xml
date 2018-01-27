@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:cardview="http://schemas.android.com/tools"
+    android:layout_marginLeft="@dimen/margin_medium"
+    android:layout_marginRight="@dimen/margin_medium"
+    android:layout_marginTop="@dimen/margin_medium"
+    cardview:cardCornerRadius="@dimen/margin_medium"
+    cardview:elevation="@dimen/margin_small"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <ImageView
+            android:id="@+id/iv_podcast"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/ted_dummy"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_podcast"
+            android:text="The Big Five"
+            android:textSize="@dimen/text_regular_2x"
+            android:textColor="@color/primary_text"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:padding="@dimen/margin_medium"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_more_24dp"
+            android:layout_below="@id/iv_podcast"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/margin_medium"/>
+        
+        <TextView
+            android:id="@+id/tv_briefly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:text="@string/dummy_briefly"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/secondary_text"
+            android:lineSpacingMultiplier="1.2"
+            android:fontFamily="sans-serif-light"
+            android:paddingLeft="@dimen/margin_medium"
+            android:paddingRight="@dimen/margin_xlarge"
+            android:paddingBottom="@dimen/margin_small"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
